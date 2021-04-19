@@ -37,9 +37,9 @@ class SeedUser extends Command
      */
     public function handle()
     {
+        //https://stackoverflow.com/questions/56669746/how-to-run-command-in-laravel-kernel-after-another-successful-command
         \Log::info("Cron is working fine!");
-        //\Artisan::call('db:seed');
-
+        $this->call('db:seed');
         $this->info('user created successfully');
 
     }

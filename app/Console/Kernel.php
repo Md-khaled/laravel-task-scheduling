@@ -24,8 +24,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+       // $schedule->command('db:seed --class=DatabaseSeeder --force')->dailyAt('17:30');
         // $schedule->command('inspire')->hourly();
-        $schedule->command('seed:user')->everyMinute();
+        $schedule->command('seed:user')->everyTwoMinutes();
     }
 
     /**
